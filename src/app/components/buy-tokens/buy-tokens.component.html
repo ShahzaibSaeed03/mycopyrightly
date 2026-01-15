@@ -1,0 +1,16 @@
+<div>
+    <app-header></app-header>
+    <div class="grid body">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div class="flex align-items-center frmCtrl grid">
+                <div class="col-12">
+                    <label class="w-8rem">Number of Tokens that you want to buy </label>
+                    <p-dropdown [options]="numbers" optionValue="value" optionLabel="value" [(ngModel)]="number" (onChange)="onChange()"/>
+                </div>
+                <label [style]="{'margin-left': '0.5rem'}">(between 5 and 100)</label>
+            </div>
+            <div id="checkout" class="col-12"></div>
+        </div>
+    </div>
+</div>

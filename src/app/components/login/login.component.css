@@ -1,0 +1,33 @@
+.card {
+    border-color: var(--blue-900);
+    border-style: groove;
+    border-width: 1px;
+    margin-top: 40px;
+}
+
+.p-inputtext {
+    height: 20px;
+}
+
+.p-password {
+    height: 20px;
+}
+
+span {
+    color: red;
+}
+
+.p-inputtext.ng-touched.ng-invalid,
+.p-dropdown.ng-touched.ng-invalid,
+.p-password.ng-touched.ng-invalid .p-inputtext {
+    border: 1px solid red;
+}
+
+.p-button {
+    margin-left: auto;
+    margin-left: auto;
+}
+
+label {
+    color: var(--blue-900);
+}

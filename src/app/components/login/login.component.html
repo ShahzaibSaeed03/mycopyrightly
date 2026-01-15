@@ -1,0 +1,60 @@
+<!-- <div class="body">
+    <app-header></app-header>
+    <div class="grid">
+        <div class="col-4"></div>
+        <div class="card col-4">
+
+            <div class="flex align-items-center frmCtrl">
+                <label for="email" class="w-8rem">Email <span>*</span></label>
+                <input id="email" type="email" pInputText [formControl]="email" required />
+            </div>
+            <div class="flex align-items-center frmCtrl">
+                <label for="password" class="w-8rem">Password <span>*</span></label>
+                <p-password id="password" type="password" [formControl]="password" [toggleMask]="true"
+                    [feedback]="false" required />
+            </div>
+
+            <div class="grid">
+                <div class="col-4"></div>
+                <button class="col-4 flex" pButton label="LOGIN" [style]="{'margin-top': '30px', 'height': '30px'}"
+                    (click)="submit()"></button>
+                <div class="col-4"></div>
+            </div>
+        </div>
+        <div class="col-4"></div>
+        <p-toast />
+    </div>
+</div> -->
+
+<app-header></app-header>
+<div class="min-h-screen flex flex-column align-items-center bg-blue-100">
+    <div class="card p-4 shadow-2 border-round w-full sm:w-10 md:w-6 lg:w-4">
+        <form (ngSubmit)="submit()" class="flex flex-column gap-3">
+
+            <div class="flex flex-column sm:flex-row align-items-center gap-2">
+                <label for="email" class="w-full sm:w-7rem font-medium">Email <span class="text-red-500">*</span></label>
+                <input id="email" type="email" pInputText [formControl]="email" required class="w-full" />
+            </div>
+
+            <div class="flex flex-column sm:flex-row align-items-center gap-2">
+                <label for="password" class="w-full sm:w-7rem font-medium">Password <span class="text-red-500">*</span></label>
+
+                <p-password
+                id="password"
+                [formControl]="password"
+                [toggleMask]="true"
+                [feedback]="false"
+                inputClass="w-full"
+                [style]="{'width': '100%'}"
+                class="w-full"
+                required>
+              </p-password>
+            </div>
+
+            <div class="flex justify-content-center mt-3">
+                <button type="submit" pButton label="Login" class="w-full sm:w-10rem"></button>
+            </div>
+        </form>
+    </div>
+    <p-toast></p-toast>
+</div>

@@ -1,0 +1,71 @@
+<div class="body">
+    <app-header></app-header>
+    <div class="grid">
+        <div class="col-1"></div>
+        <div class="col-10 grid">
+            <p id="text" class="col-12">
+                In addition to your work, we advise you to upload your drafts (even handwritten - take photos) <br>
+                and the various intermediate versions.
+                <a href="faq">For more information, please read this FAQ.</a><br>
+                Gather all your files in a zip file, and upload it.<br>
+                Please note that the size of the uploaded file is limited to 120 MB.
+            </p>
+            <div class="col-12 grid">
+                <div class="flex align-items-center col-12">
+                    <label for="title" class="col-3">Title of your work</label>
+                    <input id="title" type="text" pInputText [formControl]="title" required
+                        placeholder="up to 200 characters" />
+                </div>
+                <div class="flex align-items-center col-12">
+                    <label for="ownerName" class="col-3">Copyright Owner Name</label>
+                    <input id="ownerName" type="text" pInputText [formControl]="ownerName" required />
+                </div>
+                <label class="brackets">(this value will be visible on the Certificate)</label>
+                <div class="flex align-items-center col-12">
+                    <label for="additionalOwner" class="col-3">Additional Copyright Owners</label>
+                    <input id="additionalOwner" type="text" pInputText [formControl]="additionalOwner" required />
+                </div>
+                <label class="brackets">(e.g. your Artist name. Also specify whether you have purchased any part of your
+                    work from a
+                    third party)</label>
+            </div>
+
+            <div class="col-12 grid">
+                <div class="col-1"></div>
+
+                <div class="col-10">
+
+                    <div class="flex align-items-center col-12">
+                        <p-fileUpload #fileUploader
+                         class="col-3" 
+                         mode="basic" 
+                         customUpload="true" 
+                         [auto]="false" 
+                         [showUploadButton]="false"
+                         [showCancelButton]="false" 
+                         chooseLabel="CHOOSE FILE"
+                         [style]="{'height': '30px', 'padding': '0.3rem'}" 
+                         [multiple]="false"
+                         (onSelect)="fileSelect($event)" />
+
+                        <input id="fileName" type="text" pInputText [(ngModel)]="fileName"/>
+                        <p-toast />
+                    </div>
+
+                    <p id="attention"> PLEASE PAY ATTENTION: AFTER CLICKING ON THE “UPLOAD THIS WORK” BUTTON,
+                        YOU WON’T BE ABLE TO MODIFY THE UPLOADED FILE, NOR ANY INFORMATION IN
+                        THE ABOVE FIELDS.
+                    </p>
+
+                    <button pButton severity="danger" [style]="{'height': '30px', 'padding': '0.3rem'}"
+                        (click)="uploadFile()">UPLOAD THIS WORK</button>
+                    <button pButton severity="secondary"
+                        [style]="{'height': '30px', 'padding': '0.3rem', 'margin-left': '1rem'}"
+                        (click)="cancel()">CANCEL</button>
+                </div>
+
+                <div class="col-1"></div>
+            </div>
+        </div>
+    </div>
+</div>

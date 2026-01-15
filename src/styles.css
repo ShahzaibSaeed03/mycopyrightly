@@ -1,0 +1,193 @@
+* {
+    font-family: 'Calibri', sans-serif;
+}
+
+body {
+    background-color: var(--blue-100);
+    margin: 0px;
+}
+
+.p-dropdown {
+    height: 25px;
+    width: 11.6rem;
+}
+
+.p-dropdown-panel .p-dropdown-items {
+    width: 9.8rem;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+    padding: 0.5rem;
+}
+
+.p-dropdown-label {
+    padding-top: 0rem;
+}
+
+.p-input-icon-right>.p-inputtext {
+    padding-right: 0.8rem;
+    height: 20px;
+}
+
+.p-button.p-button-rounded {
+    height: 35px;
+    width: 130px;
+    margin: 3px;
+}
+
+.login.p-button.p-button-rounded {
+    background-color: var(--blue-900) !important;
+}
+
+.signup.p-button.p-button-rounded {
+    background-color: var(--blue-600) !important;
+}
+
+.grid {
+    /* margin-left: 0px; */
+    margin-right: 0px;
+    /* margin-top: 0rem; */
+}
+
+/* .p-sidebar .p-sidebar-header {
+    padding: 0rem;
+} */
+
+/* .p-panelmenu .p-panelmenu-header .p-panelmenu-header-content .p-panelmenu-header-action {
+    background-color: var(--blue-900);
+    color: white;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+} */
+
+/* .p-panelmenu .p-panelmenu-header .p-panelmenu-header-content {
+    text-align: center;
+    border-color: white;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+} */
+
+.p-divider-solid.p-divider-vertical:before {
+    border-color: var(--blue-900);
+    top: 2rem;
+    height: 93.5%;
+}
+
+.header {
+    background-color: var(--blue-900);
+    margin: 3px;
+    padding: 8px;
+    padding-left: 2rem;
+}
+
+.p-panelmenu .p-panelmenu-header .p-panelmenu-header-content .p-panelmenu-header-action .p-submenu-icon {
+    display: none;
+}
+
+.p-panelmenu .p-panelmenu-header .p-panelmenu-header-content .p-panelmenu-header-action{
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+}
+
+.p-panelmenu .p-panelmenu-content {
+    background-color: var(--blue-900);
+    border: none;
+}
+
+.p-panelmenu .p-panelmenu-content .p-menuitem>.p-menuitem-content .p-menuitem-link .p-menuitem-text {
+    color: red;
+}
+ 
+.p-calendar {
+    height: 20px;
+    padding: 0px;
+}
+
+.p-datepicker table td > span {
+    height: 1rem;
+    width: 1rem;
+}
+
+.frmCtrl {
+    height: 30px;
+}
+
+label {
+    color: var(--blue-900);
+}
+
+p {
+    color: var(--blue-900);
+}
+
+h2 {
+    color: var(--blue-900);
+}
+
+h3 {
+    color: var(--blue-900);
+}
+
+li {
+    color: var(--blue-900);
+}
+
+.p-divider.p-divider-horizontal:before {
+    border-top: 1px solid var(--blue-900);
+}
+
+.App-Background {
+    background-color: var(--blue-100);
+}
+
+img {
+    margin: 10px;
+    transition: filter 0.3s ease;
+}
+
+img:hover {
+    filter: brightness(80%);
+}
+
+.p-card .p-card-content {
+    padding: 0rem 0;
+}
+
+.p-card .p-card-body {
+    margin-top: 1rem;
+}
+
+.p-dropdown-panel .p-dropdown-header {
+    padding: 0px;
+}
+
+.p-dropdown-panel .p-dropdown-header .p-dropdown-filter {
+    height: 20px;
+}
+
+/* .p-tieredmenu {
+    color: #ffffff;
+    border-radius: 6px;
+    width: 12.5rem;
+} */
+
+.p-tieredmenu {
+    background: var(--blue-900);
+    border: none;
+    width: 12.5rem;
+}
+
+.p-tieredmenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
+    color: #ffffff;
+}
+
+.p-tieredmenu .p-submenu-list {
+    padding: 0.5rem 0;
+    /* color: red; */
+    background: var(--blue-900);
+    border: 0 none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    width: 23rem;
+}

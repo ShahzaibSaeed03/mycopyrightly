@@ -1,0 +1,33 @@
+<div class="body layout">
+
+    <div class="sidebar">
+        <a href="/">
+            <img src="assets/images/Logo MyCA.png" alt="Logo" class="logo" />
+        </a>
+        <p-tieredMenu [model]="items" />
+    </div>
+
+    <div class="content">
+
+        <header class="flex justify-content-between align-items-center">
+            <h1>MY COPYRIGHT ALLY</h1>
+            <div *ngIf="!(_authService.user$ | async)">
+                <p-button [styleClass]="'signup'" label="Sign up" [rounded]="true" [routerLink]="['/signup']" />
+                <p-button [styleClass]="'login'" icon="pi pi-lock" label="Log in" [rounded]="true"
+                    [routerLink]="['/login']" />
+            </div>
+            <div *ngIf="_authService.user$ | async as user">
+                <h3>{{user.firstName}} {{user.lastName}}</h3>
+            </div>
+        </header>
+
+        <router-outlet></router-outlet>
+
+        <footer>
+            <h4 id="text1">{{footerTexts.line1}}</h4>
+            <h4 id="text2">{{footerTexts.line2}}</h4>
+            <h4>Copyright 2025 - My Copuright Ally. All rights reserved</h4>
+        </footer>
+
+    </div>
+</div>

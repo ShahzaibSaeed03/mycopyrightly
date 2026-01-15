@@ -1,0 +1,16 @@
+img {
+    margin: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.accordion ::ng-deep .p-accordion .p-accordion-header .p-accordion-header-link {
+    margin-top: 1rem !important;
+    padding: 1rem !important;
+}
+
+.accordion ::ng-deep .p-accordion .p-accordion-content {
+    padding: 1rem !important;
+}

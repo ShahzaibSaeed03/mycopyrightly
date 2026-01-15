@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="grid">
+    <div class="col-1"></div>
+    <div class="col-10 grid">
+        <p class="col-8">
+            Welcome to the FAQ page for My Copyright Ally! Here, you’ll find answers to the most common questions about
+            our services, pricing, and copyright protection. If you have additional queries, feel free to <a href="/contact-us">Contact Us.</a>
+        </p>
+        <div class="col-12" *ngFor="let item of data$ | async">
+            <h2>{{ item.name }}</h2>
+            <p-accordion>
+                <p-accordionTab *ngFor="let question of item.faqs" [header]="question.question">
+                    <p>{{ question.answer }}</p>
+                </p-accordionTab>
+            </p-accordion>
+        </div>
+    </div>
+    <div class="col-1"></div>
+</div>

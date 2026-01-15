@@ -1,0 +1,44 @@
+.body {
+    padding: 5px;
+    color: var(--blue-900);
+}
+
+.p-inputtext {
+    height: 20px;
+}
+
+span {
+    color: red;
+}
+
+.p-inputtext.ng-touched.ng-invalid,
+.p-dropdown.ng-touched.ng-invalid,
+.p-password.ng-touched.ng-invalid .p-inputtext {
+    border: 1px solid red;
+}
+
+.card {
+    border-radius: 5px;
+    border-color: var(--blue-900);
+    border-style: groove;
+    border-width: 1px;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+p {
+    color: var(--blue-900);
+}
+
+a {
+    color: rgb(2, 174, 2);
+    text-decoration: none;
+}
+
+h2 {
+    margin: 0px;
+}
+
+h5 {
+    margin: 10px;
+}

@@ -1,0 +1,20 @@
+h2 {
+    margin: 0px;
+}
+
+.header{
+    align-self: flex-start;
+}
+
+H3{
+    color: white;
+    margin: 0px;
+}
+
+.highlight {
+    color: red;
+}
+
+.default {
+    color: white;
+}

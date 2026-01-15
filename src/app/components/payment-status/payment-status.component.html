@@ -1,0 +1,9 @@
+<body>
+    <section id="success" [ngClass]="{ 'hidden': this.session.status !== 'complete' }">
+        <p>
+            We appreciate your business! A confirmation email will be sent to <span id="customer-email">{{this.session.customer_email}}</span>.
+
+            If you have any questions, please email <a href="mailto:orders&#64;example.com">orders&#64;example.com</a>.
+        </p>
+    </section>
+</body>

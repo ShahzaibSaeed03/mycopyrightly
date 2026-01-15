@@ -1,0 +1,35 @@
+<div class="body">
+    <app-header></app-header>
+    <div class="grid">
+        <div class="col-1"></div>
+        <div class="col-10 grid">
+            <h3>This is the list of your Works</h3>
+            <div class="search grid align-items-center justify-content-between col-10">
+                <div class="col-2">
+                    <label for="id">Id</label>
+                    <input pInputText id="id" [formControl]="id" />
+                </div>
+                <div class="col-2">
+                    <label for="title">title</label>
+                    <input pInputText id="title" [formControl]="title" />
+                </div>
+                <div class="col-2">
+                    <label for="from">from</label>
+                    <p-calendar id="from" [formControl]="from" dateFormat="dd.mm.yy"/>
+                </div>
+                <div class="col-2">
+                    <label for="to">to</label>
+                    <p-calendar id="to" [formControl]="to" dateFormat="dd.mm.yy"/>
+                </div>
+                <button pButton (click)="submit()">Search</button>
+            </div>
+            <div class="col-2"></div>
+            <div class="titles col-12">
+                <h4>ID</h4>
+                <h4>Title</h4>
+                <h4>Date</h4>
+            </div>
+            <app-work></app-work>
+        </div>
+    </div>
+</div>

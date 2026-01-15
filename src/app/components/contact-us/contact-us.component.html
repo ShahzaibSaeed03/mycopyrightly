@@ -1,0 +1,102 @@
+<div>
+    <app-header></app-header>
+    <div class="grid body">
+        <div class="col-1"></div>
+        <div class="col-10 grid">
+            <p class="col-12">
+                We’re here to help you protect your creativity and answer any questions you may have. <br>
+                Feel free to reach out to us through the methods below.
+            </p>
+            <div class="col-12">
+                <h2 class="col-12">Email Us</h2>
+                <ul>
+                    <li><a href="mailto:support&#64;mycopyrightally.com">support&#64;mycopyrightally.com</a> (General inquiries)</li>
+                    <li><a href="mailto:billing&#64;mycopyrightally.com">billing&#64;mycopyrightally.com</a>(Subscription or payment issues)</li>
+                    <li><a href="mailto:legal&#64;mycopyrightally.com">legal&#64;mycopyrightally.com</a> (Legal inquiries or copyright concerns)</li>
+                </ul>
+                <p class="col-12">We aim to respond to all emails within 24-48 hours.</p>
+                <p-divider></p-divider>
+            </div>
+            <div class="grid col-12">
+                <div [formGroup]="contactForm" class="col-8">
+                    <h2 class="col-12">Contact Form</h2>
+                    <br><br>
+
+                    <p-floatLabel>
+                        <input id="name" type="text" pInputText formControlName="name" required />
+                        <label for="name">Name<span> *</span></label>
+                    </p-floatLabel>
+                    <br><br>
+
+                    <p-floatLabel>
+                        <input id="email" type="email" pInputText formControlName="email" required />
+                        <label for="email">Email<span> *</span></label>
+                    </p-floatLabel>
+                    <br><br>
+
+                    <p-floatLabel>
+                        <input id="subject" type="text" pInputText formControlName="subject" required />
+                        <label for="subject">Subject<span> *</span></label>
+                    </p-floatLabel>
+                    <br><br>
+
+                    <p-floatLabel>
+                        <textarea rows="5" cols="30" pInputTextarea formControlName="name" required></textarea>
+                        <label for="message">Message<span> *</span></label>
+                    </p-floatLabel>
+                    <br>
+
+                    <button pButton (click)="submit()" [style]="{'height': '35px'}">SUBMIT</button>
+                </div>
+                <p-divider class="col-12"></p-divider>
+            </div>
+            <p-toast />
+
+            <div class="col-12">
+                <h2 class="col-12">Live Chat Support</h2>
+                <p class="col-12 remove-margin">Need immediate assistance? Use our live chat feature available on
+                    our
+                    website.
+                    <br>
+                    Chat with a representative
+                    during the following hours:
+                </p>
+                <ul>
+                    <li>Monday to Thursday: 9 AM - 5 PM (NYC Time)</li>
+                </ul>
+                <p-divider></p-divider>
+            </div>
+
+            <div class="col-12">
+                <h2 class="col-12">Our address</h2>
+                <p class="col-6">
+                    My Copyright Ally<br>
+                    123 Creative Rights Lane<br>
+                    Suite 456<br>
+                    Innovation City, NY 10001<br>
+                    USA
+                </p>
+                <p-divider></p-divider>
+            </div>
+
+            <div class="col-12">
+                <h2 class="col-12">FAQs</h2>
+                <p class="col-8">
+                    Before reaching out, check our <a href="/faq">FAQ page</a> for answers to common questions about
+                    our
+                    service, pricing, and copyright protection.
+                </p>
+                <p-divider></p-divider>
+            </div>
+
+            <h2 class="col-12">Follow Us</h2>
+            <p class="col-8 remove-margin">
+                Stay updated on the latest news, tips, and features:
+            </p>
+            <ul class="col-12">
+                <li><b>X:</b> &#64;MyCopyrightAlly</li>
+                <li><b>LinkedIn:</b> My Copyright Ally</li>
+            </ul>
+        </div>
+    </div>
+</div>

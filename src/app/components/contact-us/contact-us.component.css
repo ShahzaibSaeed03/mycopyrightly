@@ -1,0 +1,41 @@
+h2 {
+    font-weight: 700;
+    margin: 0px;
+}
+
+ul {
+    margin: 0px;
+    padding-left: 2rem;
+}
+
+li {
+    margin: 0.5rem;
+}
+
+p {
+    font-weight: 700;
+}
+
+span {
+    color: red;
+}
+
+h5 {
+    margin: 0.5rem;
+}
+
+.p-inputtext {
+    width: 100%;
+}
+
+label {
+    font-size: medium;
+}
+
+.remove-margin {
+    margin: 0px;
+}
+
+.col-12{
+    padding: 0;
+}

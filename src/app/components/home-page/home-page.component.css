@@ -1,0 +1,28 @@
+h3 {
+    margin: 0px;
+}
+
+p {
+    margin: 0px;
+}
+
+.p-divider.p-divider-horizontal:before {
+    border-top: 1px #1d4ed8;
+}
+
+.paragraph {
+    margin-bottom: 1rem;
+}
+
+.item {
+    padding: 0;
+}
+
+ul {
+    margin: 0px;
+    padding-left: 2rem;
+}
+
+li {
+    margin: 0.5rem;
+}

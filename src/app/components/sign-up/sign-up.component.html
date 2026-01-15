@@ -1,0 +1,189 @@
+<div class="header">
+    <h2 style="color: red;">SIGN UP</h2>
+</div>
+<div class="body grid">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <p>
+            Please enter your personal details and billing address.<br />
+            Once your payment is validated, you will be able to upload your work.
+        </p>
+        <p>
+            If you are facing a problem while registering, please send an email to
+        </p>
+        <div class="card">
+            <div class="grid">
+                <div class="col" [formGroup]="PersonalDetails">
+                    <h3>Personal Details:</h3>
+                    <div class="flex justify-content-between align-items-center frmCtrl">
+                        <h5 class="w-8rem">First Name <span>*</span></h5>
+                        <input type="text" pInputText formControlName="firstName" required />
+                    </div>
+                    <div class="flex justify-content-between align-items-center frmCtrl">
+                        <h5 class="w-8rem">Last Name <span>*</span></h5>
+                        <input type="text" pInputText formControlName="lastName" />
+                    </div>
+                    <br><br><br><br>
+                    <div formGroupName="address">
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">Address line 1 <span>*</span></h5>
+                            <input type="text" pInputText formControlName="addressLine1" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">Address line 2</h5>
+                            <input type="text" pInputText formControlName="addressLine2" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">Zip Code <span>*</span></h5>
+                            <input type="text" pInputText formControlName="zipCode" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">City <span>*</span></h5>
+                            <input type="text" pInputText formControlName="city" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">Country <span>*</span></h5>
+                            <p-dropdown [options]="countriesList" optionLabel="name" optionValue="name"
+                                formControlName="country" [filter]="true" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">State/Region <span
+                                    *ngIf="isRequired(PersonalDetails.get('address.stateOrRegion'))">*</span></h5>
+                            <p-dropdown *ngIf="isRequired(PersonalDetails.get('address.stateOrRegion'))"
+                                [options]="USAStatesList" optionLabel="name" optionValue="name"
+                                formControlName="stateOrRegion" [filter]="true" />
+                            <input *ngIf="!isRequired(PersonalDetails.get('address.stateOrRegion'))" type="text"
+                                pInputText formControlName="stateOrRegion" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">Phone number</h5>
+                            <input type="text" pInputText formControlName="phoneNumber" />
+                        </div>
+                    </div>
+                    <div class="flex justify-content-between align-items-center frmCtrl">
+                        <h5 class="w-8rem">Profession <span>*</span></h5>
+                        <input type="text" pInputText formControlName="profession" />
+                    </div>
+                    <div class="flex justify-content-between align-items-center frmCtrl">
+                        <h5 class="w-11rem">How did you here about us? <span>*</span></h5>
+                        <input type="text" pInputText formControlName="howDidYouHearAboutUs" />
+                    </div>
+
+                    <div class="flex justify-content-between align-items-center frmCtrl">
+                        <h5 class="w-8rem">EMAIL <span>*</span></h5>
+                        <input type="text" pInputText formControlName="email" />
+                    </div>
+                    <div class="flex justify-content-between align-items-center frmCtrl">
+                        <h5 class="w-8rem">EMAIL confirmation <span>*</span></h5>
+                        <input type="text" pInputText formControlName="emailAgain" />
+                    </div>
+                    <div class="flex justify-content-between align-items-center frmCtrl">
+                        <h5 class="w-8rem">Password <span>*</span></h5>
+                        <p-password [toggleMask]="true" formControlName="password" />
+                    </div>
+                </div>
+                <p-divider layout="vertical" />
+                <div class="col" [formGroup]="BillingAddress">
+                    <h3>Billing Address:</h3>
+                    <div class="flex align-items-center justify-content-between frmCtrl">
+                        <h5 class="w-8rem">Company Name <span
+                                *ngIf="BillingAddress.hasError('companyOrNameRequired')">*</span>
+                        </h5>
+                        <input type="text" pInputText formControlName="companyName" />
+                    </div>
+                    <div class="flex align-items-center justify-content-between frmCtrl">
+                        <h5 class="w-8rem">Full name <span
+                                *ngIf="BillingAddress.hasError('companyOrNameRequired')">*</span>
+                        </h5>
+                        <input type="text" pInputText formControlName="fullName" />
+                    </div>
+                    <div class="flex align-items-center justify-content-between frmCtrl">
+                        <h5 class="w-8rem">VAT number/Tax ID</h5>
+                        <input type="text" pInputText formControlName="vatNumber" />
+                    </div><br>
+                    <div class="flex align-items-center gap-1 frmCtrl">
+                        <p-checkbox formControlName="cascadeAddress" (onChange)="cascadeAddress()" [binary]="true" />
+                        <h5>Cascade address from the "Personal Dtails" area</h5>
+                    </div>
+                    <div formGroupName="address">
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">Address line 1 <span>*</span></h5>
+                            <input type="text" pInputText formControlName="addressLine1" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">Address line 2</h5>
+                            <input type="text" pInputText formControlName="addressLine2" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">Zip Code <span>*</span></h5>
+                            <input type="text" pInputText formControlName="zipCode" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">City <span>*</span></h5>
+                            <input type="text" pInputText formControlName="city" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">Country <span>*</span></h5>
+                            <p-dropdown [options]="countriesList" optionLabel="name" optionValue="name"
+                                formControlName="country" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">State/Region <span
+                                    *ngIf="isRequired(BillingAddress.get('address.stateOrRegion'))">*</span></h5>
+                            <p-dropdown *ngIf="isRequired(BillingAddress.get('address.stateOrRegion'))"
+                                [options]="USAStatesList" optionLabel="name" optionValue="name"
+                                formControlName="stateOrRegion" />
+                            <input *ngIf="!isRequired(BillingAddress.get('address.stateOrRegion'))" type="text"
+                                pInputText formControlName="stateOrRegion" />
+                        </div>
+                        <div class="flex justify-content-between align-items-center frmCtrl">
+                            <h5 class="w-8rem">Phone number</h5>
+                            <input type="text" pInputText formControlName="phoneNumber" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col"></div>
+                <button class="col-1 flex" pButton label="SAVE" [style]="{'margin-top': '10px', 'height': '30px'}"
+                    (click)="submit()"></button>
+                <div class="col"></div>
+            </div>
+        </div>
+        <p>
+            YOUR SUBSCRIPTION: "one-year subscription and five tokens", 45usd <br />
+            You are covered by our 14-day money-back
+            guarantee.
+            <br><br>
+            You will be billed every year, unless you cancel. You can cancel at any time.
+            <br><br>
+            If you want to buy additional tokens, at 1usd each, please select a quantity (from 5 to 100):
+        </p>
+        <p>If you want to to buy additional tokens, at {{priceForToken}}usd each, pleaase select a quantity (from 5 to
+            100):</p>
+        <!-- <div class="flex align-items-center grid">
+            <div class="col-1"></div>
+            <h5 class="w-8rem">Number of Tokens you want to buy</h5>
+            <div class="col-1"></div>
+            <input type="text" pInputText formControlName="addressLine1" />
+        </div>
+
+        <div class="flex align-items-center grid">
+            <div class="col-1"></div>
+            <h5 class="w-8rem">Coupon</h5>
+            <div class="col-1"></div>
+            <input type="text" pInputText formControlName="addressLine1" />
+            <button class="flex" pButton label="CUPON VALIDATION" [style]="{'height': '25px', 'margin-left': '10px'}"
+                (click)="submit()"></button>
+        </div> -->
+        <p-message text="cupon benefits will appear here" variant="outlined"></p-message>
+
+        <p>By signing up, you agree to My Copyright Evidence's
+            <a href="https://localhost:44348/Term of Service.pdf" target="_blank">Term of Service</a> and
+            <a href="https://localhost:44348/Privacy Statement.pdf" target="_blank">Privacy Statement</a>.
+        </p>
+        <br>
+    </div>
+    <div class="col-1"></div>
+    <p-toast />
+</div>
