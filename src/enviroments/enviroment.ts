@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    apiUrl: "https://localhost:7117/api",
+    apiUrl: "https://copyrightlybackend-jvnks.ondigitalocean.app/api",
     stripePublishAbleKey: 'pk_test_51R4haHLIxobea5p9MB1Po7qydXzckU1Xnv5PIgvDoEYnp9CwT4UEm23xpegbORk4lELoAUH3ietslmpte7GqrXJ300BeDPsC0l'
   };
